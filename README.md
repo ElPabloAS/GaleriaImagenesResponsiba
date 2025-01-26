@@ -1,6 +1,8 @@
-# Galería de Imágenes Responsiva 🌆
+## Página desplegada 🚀
 
-¡Bienvenido/a a mi proyecto de una galería de imágenes completamente responsiva! 📸✨
+Haz clic en el siguiente enlace para ver el proyecto en acción:  
+🔗 **[Galería de Imágenes Responsiva](https://elpabloas.github.io/GaleriaImagenesResponsiba/)**  
+
 
 ## Descripción 📖
 
