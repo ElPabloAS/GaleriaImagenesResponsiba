@@ -48,22 +48,20 @@ body {
     background-color: rgba(0, 0, 0, 0.9);
 
     /* Centrando el contenido */
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
 }
 
 .modal-content {
-    margin: auto;
+    margin: 0; /* Sin márgenes */
     display: block;
     width: auto;
     max-width: 90%;
     max-height: 90%;
     object-fit: contain; /* Ajusta la imagen sin distorsionarla */
-
-    /* Espaciado superior */
-    margin-top: 20px;
 }
+
 
 
 .close {

@@ -92,23 +92,31 @@
     </div>
     <script>
         var modal = document.getElementById("myModal");
-        var modalImg = document.getElementById("img01");
-        var captionText = document.getElementById("caption");
-        var pictures = document.querySelectorAll('.gallery picture img');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+var pictures = document.querySelectorAll(".gallery picture img");
 
-        pictures.forEach(function (img) {
-            img.onclick = function () {
-                modal.style.display = "block";
-                modalImg.src = this.closest('picture').querySelector('source:last-of-type').srcset.split(',')[0].trim(); // Última fuente del srcset
-                captionText.innerHTML = this.dataset.description || this.alt;
-            }
+// Asignar evento de clic a cada imagen
+pictures.forEach(function (img) {
+    img.addEventListener("click", function () {
+        modal.style.display = "flex"; // Mostrar modal
+        modalImg.src = this.closest("picture").querySelector("source:last-of-type").srcset.split(",")[0].trim(); // Obtener la última fuente del srcset
+        captionText.innerHTML = this.dataset.description || this.alt; // Mostrar descripción o texto alternativo
+    });
+});
 
-        });
+// Cerrar la modal al hacer clic en el botón "X"
+var closeModal = document.getElementsByClassName("close")[0];
+closeModal.addEventListener("click", function () {
+    modal.style.display = "none"; // Ocultar modal
+});
 
-        var span = document.getElementsByClassName("close")[0];
-        span.onclick = function () {
-            modal.style.display = "none";
-        }
+// Cerrar la modal al hacer clic fuera del contenido (opcional)
+modal.addEventListener("click", function (event) {
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+});
 
     </script>
 </body>
