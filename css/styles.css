@@ -46,6 +46,11 @@ body {
     height: 100%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.9);
+
+    /* Centrando el contenido */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .modal-content {
@@ -54,7 +59,12 @@ body {
     width: auto;
     max-width: 90%;
     max-height: 90%;
+    object-fit: contain; /* Ajusta la imagen sin distorsionarla */
+
+    /* Espaciado superior */
+    margin-top: 20px;
 }
+
 
 .close {
     position: absolute;
